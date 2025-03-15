@@ -11,9 +11,9 @@
 
 var subsets = function(nums){
     let res = []
-    let dfs = (index, path) => {
+    let dfs = (idx, path) => {
         res.push(path)
-        for(let i = index; i < nums.length; i++){
+        for(let i = idx; i < nums.length; i++){
             dfs(i+1, path.concat(nums[i]))
         }
     }
